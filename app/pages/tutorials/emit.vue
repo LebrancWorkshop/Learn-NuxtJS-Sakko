@@ -4,7 +4,7 @@
       <h1>Login Form</h1>
     </header>
     <div>
-      <LoginForm />
+      <LoginForm @login-emit="handleLoginEmit" />
     </div>
   </div>
 </template>
@@ -18,6 +18,11 @@ export default {
   data() {
     return {
 
+    }
+  },
+  methods: {
+    handleLoginEmit(username, password) {
+      console.log(`Page\nUsername: ${username}\nPassword: ${password}\n\n`);
     }
   }
 }
